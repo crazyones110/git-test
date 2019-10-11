@@ -9,6 +9,7 @@
 </head>
 <body>
     <div id="app">
+        <header>{{header}}</header>
         <p>{{text}}</p>
         <p :style="styleP">{{text2}}</p>
         <button @click="handleClick">click me</button>
@@ -22,7 +23,8 @@
                 text2: "bye world",
                 styleP: {
                     color: "black"
-                }
+                },
+                header: "HEADER"
             },
             methods: {
                 handleClick () {
