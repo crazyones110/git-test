@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>git-test</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <p>{{text}}</p>
+        <p :style="styleP">{{text2}}</p>
+        <button @click="handleClick">click me</button>
+    </div>
+    
+    <script>
+        let vm = new Vue({
+            el: "#app",
+            data: {
+                text: "hello world",
+                text2: "bye world",
+                styleP: {
+                    color: "black"
+                }
+            },
+            methods: {
+                handleClick () {
+                    this.styleP.color = this.styleP.color === "black" ? "red" : "black" 
+                }
+            },
+        })
+    </script>
+</body>
+</html>
