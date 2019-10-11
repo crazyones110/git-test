@@ -13,6 +13,7 @@
         <p>{{text}}</p>
         <p :style="styleP">{{text2}}</p>
         <button @click="handleClick">click me</button>
+        <footer>{{footer}}</footer>
     </div>
     
     <script>
@@ -24,7 +25,8 @@
                 styleP: {
                     color: "black"
                 },
-                header: "HEADER"
+                header: "HEADER",
+                footer: "FOOTER"
             },
             methods: {
                 handleClick () {
